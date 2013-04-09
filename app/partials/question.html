@@ -1,0 +1,7 @@
+<h1>Welcome to Dave's Quiz</h1>
+<p>{{quiz.description}}</p>
+<h3>Question {{question.questionId}}</h3>
+<p>Question {{question.questionId}} of {{quiz.number_of_questions}}</p>
+<p>{{question.question_text}}</p>
+<a ng-show="question.questionId > 1" href="#/quizzes/{{quiz.quizId}}/question{{question.questionId-1}}">Previous</a>
+<a ng-show="question.questionId < quiz.number_of_questions" href="#/quizzes/{{quiz.quizId}}/question{{question.questionId+1}}">Next</a>
