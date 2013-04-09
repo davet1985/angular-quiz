@@ -2,14 +2,6 @@
 
 /* Services */
 
-
-// Demonstrate how to register services
-// In this case it is a simple value service.
-
-//angular.module('quizApp.services', []).
-//  value('version', '0.1');
-
-
 angular.module('quizApp.services.Quiz', ['ngResource']).
     factory('Quiz', function($resource){
   return $resource('quizzes/:quizId.json', {}, {
