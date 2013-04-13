@@ -31,6 +31,9 @@ angular.module('quizApp.services.Answers', []).service('AnswerService', function
     		return false;
     	}
     	return answer.option == answers[question].option;
+    },
+    clearAnswers: function () {
+    	answers = new Array();
     }
   };
 });

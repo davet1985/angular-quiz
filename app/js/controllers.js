@@ -2,8 +2,10 @@
 
 /* Controllers */
 
-function QuizCtrl($scope, $routeParams, Quiz) {
+function QuizCtrl($scope, $routeParams, Quiz, AnswerService) {
   $scope.quiz = Quiz.get({quizId: $routeParams.quizId});
+
+  $scope.clearAnswers = AnswerService.clearAnswers();
 }
 
 function QuestionCtrl($scope, $routeParams, Quiz, Question, AnswerService) {
