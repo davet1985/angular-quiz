@@ -23,11 +23,11 @@
     </ul>
     <div>
       <span class="pull-left">
-        <a class="btn" type="button" ng-show="question.questionId > 1" href="#/quizzes/{{quiz.quizId}}/question{{question.questionId-1}}">Previous</a>
+        <a class="btn" type="button" ng-show="question.questionId > 1" href="#/quizzes/{{quiz.quizId}}/q/question{{question.questionId-1}}">Previous</a>
       </span>
       <span class="pull-right">
-        <a class="btn" type="button" ng-show="question.questionId < quiz.number_of_questions && isAnswered(question.questionId)" href="#/quizzes/{{quiz.quizId}}/question{{question.questionId+1}}">Next</a>
-        <a class="btn" type="button" ng-show="question.questionId == quiz.number_of_questions && isAnswered(question.questionId)" href="#">Finish</a>
+        <a class="btn" type="button" ng-show="question.questionId < quiz.number_of_questions && isAnswered(question.questionId)" href="#/quizzes/{{quiz.quizId}}/q/question{{question.questionId+1}}">Next</a>
+        <a class="btn" type="button" ng-show="question.questionId == quiz.number_of_questions && isAnswered(question.questionId)" href="#/quizzes/{{quiz.quizId}}/results">Finish</a>
       </span>
     </div>
     <br/>  

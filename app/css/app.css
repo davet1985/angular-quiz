@@ -69,11 +69,11 @@ body {
   margin-right: 0 !important;
 }
 
-.options-true {
+.answer-true {
   color: green;
 }
 
-.options-false {
+.answer-false {
   color: red;
 }
 

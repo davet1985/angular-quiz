@@ -20,7 +20,7 @@ angular.module('quizApp.services.Answers', []).service('AnswerService', function
     addAnswer: function (question, answer) {
     	answers[question] = answer;
     },
-    getAnswerResponse: function () {
+    getAnswers: function () {
       return answers;
     },
     isAnswered: function(question) {
@@ -34,6 +34,24 @@ angular.module('quizApp.services.Answers', []).service('AnswerService', function
     },
     clearAnswers: function () {
     	answers = new Array();
+    },
+    getCorrectAnswers: function () {
+    	var correct = [];
+    	for (var i in answers) {
+    		if (answers[i].correct) {
+    			correct.push(answers[i].text);	
+    		}
+    	};
+    	return correct;
+    },
+    getIncorrectAnswers: function () {
+    	var incorrect =[];
+    	for (var i in answers) {
+    		if (!answers[i].correct) {
+    			incorrect.push(answers[i].text);	
+    		}
+    	};
+    	return incorrect;
     }
   };
 });

@@ -5,7 +5,8 @@ angular.module('quizApp', ['quizApp.filters', 'quizApp.services.Quiz', 'quizApp.
   config(['$routeProvider', function($routeProvider) {
 
     $routeProvider.when('/quizzes/:quizId', {templateUrl: 'partials/quiz.html', controller: QuizCtrl});
-    $routeProvider.when('/quizzes/:quizId/:questionId', {templateUrl: 'partials/question.html', controller: QuestionCtrl});
+    $routeProvider.when('/quizzes/:quizId/results', {templateUrl: 'partials/results.html', controller: ResultsCtrl});
+    $routeProvider.when('/quizzes/:quizId/q/:questionId', {templateUrl: 'partials/question.html', controller: QuestionCtrl});
     $routeProvider.otherwise({redirectTo: '/quizzes/quiz1'});
 
   }]);
