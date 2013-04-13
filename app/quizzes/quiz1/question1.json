@@ -1,4 +1,21 @@
 {
-	"questionId": 1,
-	"question_text": "This is question one?"
+    "questionId": 1,
+    "question_text": "What is the capital of France?",
+    "options": [
+        {
+            "option": "A",
+            "text": "Paris",
+            "correct": true
+        },
+        {
+            "option": "B",
+            "text": "Lyon",
+            "correct": false
+        },
+        {
+            "option": "C",
+            "text": "Cannes",
+            "correct": false
+        }
+    ]
 }

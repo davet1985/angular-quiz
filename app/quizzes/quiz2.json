@@ -1,5 +1,6 @@
 {
   "quizId": "quiz2",
-  "description": "this is quiz number 2",
+  "title": "Quiz 2",
+  "description": "This is quiz number 2",
   "number_of_questions": 7
 }

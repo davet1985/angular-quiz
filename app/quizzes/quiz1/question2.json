@@ -1,4 +1,21 @@
 {
 	"questionId": 2,
-	"question_text": "Now we are onto question number two?"
+	"question_text": "What is the capital of Australia?",
+    "options": [
+        {
+            "option": "A",
+            "text": "Sydney",
+            "correct": false
+        },
+        {
+            "option": "B",
+            "text": "Melbourne",
+            "correct": false
+        },
+        {
+            "option": "C",
+            "text": "Canberra",
+            "correct": true
+        }
+    ]
 }

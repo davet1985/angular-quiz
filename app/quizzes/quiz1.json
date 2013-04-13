@@ -1,5 +1,6 @@
 {
   "quizId": "quiz1",
-  "description": "This is quiz number 1",
+  "title": "Capital Cities",
+  "description": "How well do you know your capital cities? Take this quiz and see!",
   "number_of_questions": 3
 }

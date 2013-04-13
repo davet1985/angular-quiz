@@ -1,7 +1,30 @@
-<h1>Welcome to Dave's Quiz</h1>
-<p>{{quiz.description}}</p>
-<h3>Question {{question.questionId}}</h3>
-<p>Question {{question.questionId}} of {{quiz.number_of_questions}}</p>
-<p>{{question.question_text}}</p>
-<a ng-show="question.questionId > 1" href="#/quizzes/{{quiz.quizId}}/question{{question.questionId-1}}">Previous</a>
-<a ng-show="question.questionId < quiz.number_of_questions" href="#/quizzes/{{quiz.quizId}}/question{{question.questionId+1}}">Next</a>
+<div id="left" class="span3">
+  <h4 class="text-center">{{quiz.title}}</h4>
+  <div ng-show="answers.length == 0">
+    Your answers will show here.
+  </div>
+  <div ng-hide="answers.length == 0">
+    <p>Answers</p>
+    <ul class="unstyled">
+      <li ng-repeat="a in answers">
+        {{a}}
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="span6 text-center">
+  <div class="quiz well">
+    <p class="text-left"><strong>Question {{question.questionId}} of {{quiz.number_of_questions}}</strong></p>
+    <p class="lead">{{question.question_text}}</p>
+    <ul class="unstyled answers">
+      <li ng-click="addAnswer(option.text)" ng-repeat="option in question.options">
+        <strong>{{option.text}}</strong>
+      </li>
+    </ul>
+    <div>
+      <span class="pull-left"><a class="btn btn-info" type="button" ng-show="question.questionId > 1" href="#/quizzes/{{quiz.quizId}}/question{{question.questionId-1}}">Previous</a></span>
+      <span class="pull-right"><a class="btn btn-info" type="button" ng-show="question.questionId < quiz.number_of_questions" href="#/quizzes/{{quiz.quizId}}/question{{question.questionId+1}}">Next</a></span>
+    </div>
+    <br/>  
+  </div>
+</div>

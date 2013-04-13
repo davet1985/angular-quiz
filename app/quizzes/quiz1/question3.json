@@ -1,4 +1,21 @@
 {
 	"questionId": 3,
-	"question_text": "What is the answer to question number three?"
+	"question_text": "What is the capital of England?",
+    "options": [
+        {
+            "option": "A",
+            "text": "Birmingham",
+            "correct": false
+        },
+        {
+            "option": "B",
+            "text": "London",
+            "correct": true
+        },
+        {
+            "option": "C",
+            "text": "Manchester",
+            "correct": false
+        }
+    ]
 }
