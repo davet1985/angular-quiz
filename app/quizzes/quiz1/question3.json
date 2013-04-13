@@ -16,6 +16,11 @@
             "option": "C",
             "text": "Manchester",
             "correct": false
+        },
+        {
+            "option": "D",
+            "text": "Liverpool",
+            "correct": false
         }
     ]
 }

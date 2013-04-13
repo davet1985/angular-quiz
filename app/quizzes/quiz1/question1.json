@@ -16,6 +16,11 @@
             "option": "C",
             "text": "Cannes",
             "correct": false
+        },
+        {
+            "option": "D",
+            "text": "Nice",
+            "correct": false
         }
     ]
 }

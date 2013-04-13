@@ -11,9 +11,17 @@ function QuestionCtrl($scope, $routeParams, Quiz, Question, AnswerService) {
 	$scope.quiz = Quiz.get({quizId: $routeParams.quizId});
   $scope.question = Question.get({quizId: $routeParams.quizId, questionId: $routeParams.questionId});
   $scope.answers = AnswerService.getAnswerResponse();
+
+  $scope.isSelected = function(question, option) {
+  	return AnswerService.isSelected(question, option);
+  }
+
+  $scope.isAnswered = function(question) {
+  	return AnswerService.isAnswered(question);
+  }
   
-  $scope.addAnswer = function(a) {
-     AnswerService.addAnswer(a);
+  $scope.addAnswer = function(question, option) {
+  	AnswerService.addAnswer(question, option);
   };
   
   $scope.alertAnswers = function() {

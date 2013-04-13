@@ -15,13 +15,22 @@ angular.module('quizApp.services.Question', ['ngResource']).factory('Question', 
 });
 
 angular.module('quizApp.services.Answers', []).service('AnswerService', function () {
-  var answers = [];
+  var answers = new Array();
   return {
-    addAnswer: function (answer) {
-      answers.push(answer);
+    addAnswer: function (question, answer) {
+    	answers[question] = answer;
     },
     getAnswerResponse: function () {
-        return answers;
+      return answers;
+    },
+    isAnswered: function(question) {
+    	return question in answers;
+    },
+    isSelected: function (question, answer) {
+    	if (!(question in answers)) {
+    		return false;
+    	}
+    	return answer.option == answers[question].option;
     }
   };
 });

@@ -16,6 +16,11 @@
             "option": "C",
             "text": "Canberra",
             "correct": true
+        },
+        {
+            "option": "D",
+            "text": "Perth",
+            "correct": false
         }
     ]
 }

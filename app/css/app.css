@@ -55,8 +55,12 @@ body {
   box-shadow: 2px 2px 1px #666;
 }
 
+#left .answers {
+  font-style: italic;
+  font-size: 12px;
+}
+
 .quiz {
-  color: #333;
   margin-top: 30px;
 }
 
@@ -64,7 +68,6 @@ body {
   background-color: green;
   margin-top: 0;
   border-radius: 0 0 5px 5px;
-
 }
 
 .question {
@@ -73,17 +76,19 @@ body {
 
 .well {
   border-radius: 10px;
-  background-color: #EFEFEF;
+  background-color: #111;
+  border: 2px solid #000;
+  box-shadow: 2px 2px 1px #666;
 }
 
-.answers li {
+.options li {
   padding: 5px 10px;
-  background-color: #DDD;
+  background-color: #333;
+  margin-bottom: 2px;
 }
 
-.answers li:hover {
-  background-color: green;
-  color: #FFF;
+.options li:hover {
+  background-color: #4671D5;
 }
 
 .no-left-margin {
@@ -92,4 +97,16 @@ body {
 
 .no-right-margin {
   margin-right: 0 !important;
+}
+
+.options-true {
+  color: green;
+}
+
+.options-false {
+  color: red;
+}
+
+.option-true {
+  background-color: #4671D5 !important;
 }
