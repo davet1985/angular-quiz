@@ -1,0 +1,41 @@
+<div id="left" class="span3">
+  <h4 class="text-center">{{quiz.title}}</h4>
+  <div ng-show="answers.length == 0">
+    Your answers will show here.
+  </div>
+  <div ng-hide="answers.length == 0">
+    <p>Answers</p>
+    <ul class="unstyled answers">
+      <li ng-repeat="a in answers" class="answer-{{a.correct}}">
+        {{a.text}}
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="span6 text-center">
+	<div class="quiz well">
+		<h2>Results</h2>
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Incorrect</th>
+					<th>Correct</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<span ng-repeat="a in incorrectAnswers">{{a}}<br/></span>
+					</td>
+					<td>
+						<span ng-repeat="a in correctAnswers">{{a}}<br/></span>
+					</td>
+				</tr>
+				<tr>
+					<td>{{incorrectAnswers.length}}</td>
+					<td>{{correctAnswers.length}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
