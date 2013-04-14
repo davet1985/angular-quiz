@@ -16,6 +16,10 @@
 	<div class="quiz well">
 		<h2>Results</h2>
 		<p class="lead">You scored {{correctAnswers.length}} out of {{quiz.number_of_questions}}!<p>
+		<div class="progress progress-striped">
+      <div class="bar bar-success results-bar" style="width: {{correctAnswers.length/ quiz.number_of_questions * 100 }}%;">{{correctAnswers.length}}</div>
+      <div class="bar bar-danger results-bar" style="width: {{incorrectAnswers.length/ quiz.number_of_questions * 100 }}%;">{{incorrectAnswers.length}}</div>
+    </div>
 		<table class="table">
 			<thead>
 				<tr>

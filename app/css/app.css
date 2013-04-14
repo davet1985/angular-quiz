@@ -80,3 +80,8 @@ body {
 .option-true {
   background-color: #4671D5 !important;
 }
+
+.results-bar {
+  color: #000 !important;
+  font-weight: bold;
+}
