@@ -1,0 +1,26 @@
+{
+	"questionId": 4,
+	"question_text": "What is the capital of Italy?",
+    "options": [
+        {
+            "option": "A",
+            "text": "Milan",
+            "correct": false
+        },
+        {
+            "option": "B",
+            "text": "Naples",
+            "correct": false
+        },
+        {
+            "option": "C",
+            "text": "Venice",
+            "correct": false
+        },
+        {
+            "option": "D",
+            "text": "Rome",
+            "correct": true
+        }
+    ]
+}

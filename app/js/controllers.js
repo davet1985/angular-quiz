@@ -30,7 +30,7 @@ function QuestionCtrl($scope, $routeParams, Quiz, Question, AnswerService) {
 function ResultsCtrl($scope, $routeParams, Quiz, AnswerService) {
   $scope.quiz = Quiz.get({quizId: $routeParams.quizId});
   $scope.answers = AnswerService.getAnswers();
-
+  
   $scope.correctAnswers = AnswerService.getCorrectAnswers();
   $scope.incorrectAnswers = AnswerService.getIncorrectAnswers();
 }

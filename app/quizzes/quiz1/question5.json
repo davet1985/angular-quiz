@@ -1,0 +1,26 @@
+{
+	"questionId": 5,
+	"question_text": "What is the capital of Spain?",
+    "options": [
+        {
+            "option": "A",
+            "text": "Barcelona",
+            "correct": false
+        },
+        {
+            "option": "B",
+            "text": "Valencia",
+            "correct": false
+        },
+        {
+            "option": "C",
+            "text": "Madrid",
+            "correct": true
+        },
+        {
+            "option": "D",
+            "text": "Seville",
+            "correct": false
+        }
+    ]
+}

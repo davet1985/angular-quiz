@@ -10,6 +10,3 @@ angular.module('quizApp', ['quizApp.filters', 'quizApp.services.Quiz', 'quizApp.
     $routeProvider.otherwise({redirectTo: '/quizzes/quiz1'});
 
   }]);
-
-
-

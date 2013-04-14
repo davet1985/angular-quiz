@@ -15,6 +15,9 @@
 <div class="span6 text-center">
   <div class="quiz well">
     <p class="text-left">Question {{question.questionId}} of {{quiz.number_of_questions}}</p>
+    <div class="progress progress-striped">
+      <div class="bar bar-success" style="width: {{ question.questionId / quiz.number_of_questions * 100 }}%;"></div>
+    </div>
     <p class="lead">{{question.question_text}}</p>
     <ul class="unstyled options">
       <li class="option-{{isSelected(question.questionId, option)}}" ng-click="addAnswer(question.questionId, option)" ng-repeat="option in question.options">
