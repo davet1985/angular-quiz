@@ -8,6 +8,7 @@ function QuizCtrl($scope, $routeParams, Quiz, AnswerService) {
 }
 
 function QuestionCtrl($scope, $routeParams, Quiz, Question, AnswerService) {
+  $scope.isQuestion = true;
   
 	$scope.quiz = Quiz.get({quizId: $routeParams.quizId});
   $scope.question = Question.get({quizId: $routeParams.quizId, questionId: $routeParams.questionId});
@@ -28,9 +29,10 @@ function QuestionCtrl($scope, $routeParams, Quiz, Question, AnswerService) {
 }
 
 function ResultsCtrl($scope, $routeParams, Quiz, AnswerService) {
+  $scope.isResults = true;
   $scope.quiz = Quiz.get({quizId: $routeParams.quizId});
   $scope.answers = AnswerService.getAnswers();
-  
+
   $scope.correctAnswers = AnswerService.getCorrectAnswers();
   $scope.incorrectAnswers = AnswerService.getIncorrectAnswers();
 }

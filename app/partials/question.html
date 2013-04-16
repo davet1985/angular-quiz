@@ -1,17 +1,20 @@
-<div id="left" class="span3">
-  <h4 class="text-center">{{quiz.title}}</h4>
-  <div ng-show="answers.length == 0">
-    Your answers will show here.
+<!--div class="span3">
+  <div class="quiz well">
+    <h4 class="text-center">{{quiz.title}}</h4>
+    <div ng-show="answers.length == 0">
+      Your answers will show here.
+    </div>
+    <div ng-hide="answers.length == 0">
+      <p>Answers</p>
+      <ul class="unstyled answers">
+        <li ng-repeat="a in answers">
+          {{a.text}}
+        </li>
+      </ul>
+    </div>
   </div>
-  <div ng-hide="answers.length == 0">
-    <p>Answers</p>
-    <ul class="unstyled answers">
-      <li ng-repeat="a in answers">
-        {{a.text}}
-      </li>
-    </ul>
-  </div>
-</div>
+</div-->
+<ng-include src="'partials/answers.html'"></ng-include>
 <div class="span6 text-center">
   <div class="quiz well">
     <p class="text-left">Question {{question.questionId}} of {{quiz.number_of_questions}}</p>

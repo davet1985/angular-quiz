@@ -1,24 +1,28 @@
-<div id="left" class="span3">
-  <h4 class="text-center">{{quiz.title}}</h4>
-  <div ng-show="answers.length == 0">
-    Your answers will show here.
-  </div>
-  <div ng-hide="answers.length == 0">
-    <p>Answers</p>
-    <ul class="unstyled answers">
-      <li ng-repeat="a in answers" class="answer-{{a.correct}}">
-        {{a.text}}
-      </li>
-    </ul>
-  </div>
-</div>
+<!--div class="span3">
+  <div ng-include src="partials/answers.html"></div>
+  <div class="quiz well">
+	  <h4 class="text-center">{{quiz.title}}</h4>
+	  <div ng-show="answers.length == 0">
+	    Your answers will show here.
+	  </div>
+	  <div ng-hide="answers.length == 0">
+	    <p>Answers</p>
+	    <ul class="unstyled answers">
+	      <li ng-repeat="a in answers" class="answer-{{a.correct}}">
+	        {{a.text}}
+	      </li>
+	    </ul>
+	  </div>
+	</div>
+</div-->
+<ng-include src="'partials/answers.html'"></ng-include>
 <div class="span6 text-center">
 	<div class="quiz well">
 		<h2>Results</h2>
 		<p class="lead">You scored {{correctAnswers.length}} out of {{quiz.number_of_questions}}!<p>
 		<div class="progress progress-striped">
-      <div class="bar bar-success results-bar" style="width: {{correctAnswers.length/ quiz.number_of_questions * 100 }}%;">{{correctAnswers.length}}</div>
-      <div class="bar bar-danger results-bar" style="width: {{incorrectAnswers.length/ quiz.number_of_questions * 100 }}%;">{{incorrectAnswers.length}}</div>
+      <div class="bar bar-success results-bar" style="width: {{correctAnswers.length/ quiz.number_of_questions * 100 }}%;"></div>
+      <div class="bar bar-danger results-bar" style="width: {{incorrectAnswers.length/ quiz.number_of_questions * 100 }}%;"></div>
     </div>
 		<table class="table">
 			<thead>
